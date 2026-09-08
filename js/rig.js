@@ -26,5 +26,5 @@ P(c,`M${rx-hip} ${ry-2} Q${rx} ${ry+8} ${rx+hip} ${ry-1} L${rx+hip} ${ry+8} Q${r
 drawArm(true);
 if(!f.headDetached)local(c,hx,hy,p.head,()=>{c.scale(b.head*p.headScale,b.head);LB.drawFace(c,a,p.face,t,f.look??1,1-(f.hp||100)/(f.maxHp||100))});
 if(f.hp/f.maxHp<.5){P(c,`M${tx-22} ${ty+46} l9-6 3 9 9-5 -7 16 -15-2Z`,a.skin,LB.ink,1.2);P(c,`M${tx+15} ${ty+31} l7 5 -9 3`,null,cs,2)}
-f.renderHead={x:hx,y:hy};c.restore();},contact(f,t,kind='punch'){const p=LB.Animation.pose(f,t),a=f.appearance,s=(f.scale||1)*a.height,hand=kind==='kick'||kind==='knee'?p.frontFoot:p.frontHand;let x=hand.x+p.pelvis.x,y=hand.y+p.y;const rot=p.rotation+(f.physicsRotation||0),rx=x*Math.cos(rot)-y*Math.sin(rot),ry=x*Math.sin(rot)+y*Math.cos(rot);return{x:f.x+rx*s*f.facing,y:f.y+ry*s}}};
+f.renderHead={x:hx,y:hy};c.restore();},contact(f,t,kind='punch'){const p=LB.Animation.pose(f,t),a=f.appearance,s=(f.scale||1)*a.height,hand=kind==='kick'||kind==='knee'?p.frontFoot:p.frontHand;let x=hand.x,y=hand.y;const rot=p.rotation+(f.physicsRotation||0),rx=x*Math.cos(rot)-y*Math.sin(rot)+p.pelvis.x,ry=x*Math.sin(rot)+y*Math.cos(rot)+p.y;return{x:f.x+rx*s*f.facing,y:f.y+ry*s}}};
 })();
