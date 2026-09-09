@@ -20,3 +20,7 @@ The artwork uses a shared articulated rig and authored pose families. Named spec
 ## Faster combat update
 
 Attack, movement, recovery and stamina timings were retuned. All simulation checks pass after this update, including a successful 25-level run, all weapon/special contacts, planted-foot drift, and the unchanged four-second knockout hold. Across the same 30 seeded matchups, mean time to knockout changed from 28.9 seconds to 18.6 seconds. The latest timing changes have not been visually rechecked because the host Mac is locked.
+
+## Basic math trivia update
+
+Advanced maths has been replaced with basic arithmetic and counting. A focused trivia check verified all 1,000 unique prompts, all four-choice answer sets, all 925 numerical/counting answers independently from the question text, and draw-without-replacement behavior. Times tables use factors 1–10; division questions have whole-number answers. The 15-second timer and resurrection rules are unchanged. See `trivia-results.txt`.

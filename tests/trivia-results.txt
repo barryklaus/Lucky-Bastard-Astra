@@ -1,0 +1,4 @@
+PASS Exactly 1000 unique valid trivia questions {"Addition":100,"Subtraction":100,"Multiplication":100,"Division":100,"Counting":100,"Money":100,"Doubles":100,"Halves":100,"Capitals":25,"Chemistry":25,"Computing":25,"Scientific units":25,"Logic":25,"Wordplay":25,"Everyday counting":25,"Animals":25}
+PASS Independently checked answers for all 925 arithmetic and counting questions
+PASS Complex maths removed; multiplication uses 1–10 and division is exact
+PASS Four unique choices per question, one correct answer, and no repeated draw before deck exhaustion
