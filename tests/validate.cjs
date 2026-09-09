@@ -76,3 +76,13 @@ test('Corrected wrist and ear artwork renders in victory, guard and weapon poses
  for(let head=0;head<10;head++)for(let ears=0;ears<4;ears++){fc.save();fc.translate(70+head*140,95+ears*165);L.drawFace(fc,{...L.defaultAppearance(),head,ears,hair:11,beard:0,accessory:0,details:5},'hurt',2);L.text(fc,L.options.ears[ears],0,65,12,L.ink,'Arial','center');fc.restore()}
  fs.writeFileSync(path.join(ROOT,'tests/ear-attachment-render.png'),faces.toBuffer('image/png'));
 });
+
+test('Belt-free bodies and half-covered upper eyelids render across all variants',()=>{
+ const bodies=createCanvas(1800,920),bc=bodies.getContext('2d');bc.fillStyle='#e3d7b5';bc.fillRect(0,0,1800,920);
+ for(let i=0;i<10;i++){const a={...L.defaultAppearance(),body:i,head:i,eyes:i%6,top:i,bottom:i%8,shoes:i%8,cloth:L.palette.cloth[i%8]};const f=new L.Fighter(a,true);f.x=150+(i%5)*360;f.y=410+Math.floor(i/5)*450;f.state=i%2?'idle':'victory';L.Rig.draw(bc,f,2.4);L.text(bc,L.options.body[i],f.x,f.y+35,17,L.ink,'Arial','center')}
+ fs.writeFileSync(path.join(ROOT,'tests/belt-free-render.png'),bodies.toBuffer('image/png'));
+ const eyes=createCanvas(1320,720),ec=eyes.getContext('2d');ec.fillStyle='#e3d7b5';ec.fillRect(0,0,1320,720);
+ const states=['neutral','focused','angry','scared','smug','hurt'];
+ for(let eye=0;eye<6;eye++)for(let state=0;state<6;state++){ec.save();ec.translate(110+eye*220,95+state*115);ec.scale(1.25,1.25);L.drawFace(ec,{...L.defaultAppearance(),head:(eye+state)%10,eyes:eye,hair:11,beard:0,details:5},states[state],1.8,1);ec.restore();L.text(ec,L.options.eyes[eye]+' / '+states[state],110+eye*220,151+state*115,12,L.ink,'Arial','center')}
+ fs.writeFileSync(path.join(ROOT,'tests/half-eyelids-render.png'),eyes.toBuffer('image/png'));
+});

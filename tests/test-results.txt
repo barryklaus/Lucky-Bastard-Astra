@@ -24,3 +24,4 @@ PASS Final blow begins with hit-stop before slow motion
 PASS Open hands and victory fingers point beyond the wrist, away from the elbow
 PASS Every ear size stays connected to all ten head silhouettes
 PASS Corrected wrist and ear artwork renders in victory, guard and weapon poses
+PASS Belt-free bodies and half-covered upper eyelids render across all variants

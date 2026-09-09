@@ -36,3 +36,7 @@ Pixel checks verify that victory, open, block and relaxed hand fingers extend aw
 ## Low-top sneakers update
 
 All eight footwear IDs now draw low-top sneakers, including previously saved selections. Creator labels use sneaker names and the shared renderer covers fighters, spectators and detached legs. The existing native Canvas character sheet was visually inspected across all eight styles. The existing suite passes, including planted walking feet, kick and weapon contact, finishers, wrist orientation and ear attachment. Browser verification remains unavailable while the Mac is locked. Asset cache identifiers are now 1.0.7.
+
+## Belt removal and upper-eyelid update
+
+All waistband, belt-line and buckle artwork has been removed from the shared rig, which covers fighters, spectators and detached upper bodies. A native Canvas sheet was inspected across all ten body types, ten tops and eight bottoms. Upper eyelids now overlay the complete upper half of both eyeballs from corner to corner. A second sheet covers all six eye types across neutral, focused, angry, scared, smug and hurt states. The full validation suite passes. Asset cache identifiers are now 1.0.8.

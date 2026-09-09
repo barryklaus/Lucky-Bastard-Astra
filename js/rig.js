@@ -45,14 +45,10 @@ if(jacket){P(c,`M${tx-13} ${ty+9} L${tx-17} ${ty+32} ${rx-13} ${ry+7} ${rx+10} $
 if(a.top===6){P(c,`M${rx-26} ${ry-24} Q${rx} ${ry-34} ${rx+26} ${ry-23} L${rx+18} ${ry-4} ${rx-20} ${ry-5}Z`,cs,LB.ink,1.5);L(c,[tx-10,ty+15,tx-13,ty+44], '#ddceb0',2);L(c,[tx+10,ty+15,tx+15,ty+39],'#ddceb0',2)}
 if(a.top===7){P(c,`M${tx-13} ${ty+1} L${tx-3} ${ty+17} ${tx-16} ${ty+23} ${tx-24} ${ty+10}Z`,LB.shade(a.cloth,20));P(c,`M${tx+13} ${ty+1} L${tx+2} ${ty+17} ${tx+17} ${ty+23} ${tx+24} ${ty+10}Z`,LB.shade(a.cloth,20));L(c,[tx,ty+20,rx,ry+6],cs,1.5);for(let y=ty+28;y<ry;y+=12)E(c,tx+2,y,1.5,1.5,LB.ink)}
 if(a.top===9){LB.text(c,'13',tx,ty+57,35,'#dfd1a9','Impact','center');L(c,[tx-w+8,ty+26,tx-w+4,ty+46],'#dfd1a9',5)}if(a.top===2){P(c,`M${tx-28} ${ty+18} L${tx-8} ${ty+23} ${tx-9} ${ty+44} ${tx-28} ${ty+41}Z`,cs,LB.ink,1.2)}
-L(c,[rx-hip+4,ry-6,rx+hip-5,ry-3],cs,2);P(c,`M${tx-w+13} ${ty+35} l10 7 -12 4 M${rx-hip+8} ${ry-20} l14 3 M${rx+hip-7} ${ry-15} l-15 4`,null,LB.shade(a.cloth,-48),1.6);if(a.top===4){P(c,`M${rx-34} ${ry-28} l17 5 -3 16 -18-4Z`,cs,LB.ink,1.5);L(c,[rx-30,ry-25,rx-21,ry-22],'#d0b480',1.3)}
+P(c,`M${tx-w+13} ${ty+35} l10 7 -12 4 M${rx-hip+8} ${ry-20} l14 3 M${rx+hip-7} ${ry-15} l-15 4`,null,LB.shade(a.cloth,-48),1.6);if(a.top===4){P(c,`M${rx-34} ${ry-28} l17 5 -3 16 -18-4Z`,cs,LB.ink,1.5);L(c,[rx-30,ry-25,rx-21,ry-22],'#d0b480',1.3)}
 if(a.accessory===6)P(c,`M${tx-16} ${ty+7} Q${tx-6} ${ty+40} ${tx+15} ${ty+8}`,null,'#d5b45b',3);
 }
 drawLeg(true);if(body&&a.bottom===3)P(c,`M${rx-hip} ${ry-6} Q${rx} ${ry+5} ${rx+hip} ${ry-4} L${rx+hip+12} ${ry+43} Q${rx} ${ry+58} ${rx-hip-12} ${ry+42}Z`,a.pants,LB.ink,2.5);
-// Waistband in front of thigh roots.
-if(body){
-P(c,`M${rx-hip} ${ry-2} Q${rx} ${ry+8} ${rx+hip} ${ry-1} L${rx+hip} ${ry+8} Q${rx} ${ry+17} ${rx-hip} ${ry+7}Z`,ps,LB.ink,1.7);P(c,`M${rx-6} ${ry+3} L${rx+6} ${ry+3} ${rx+6} ${ry+11} ${rx-6} ${ry+11}Z`,'#bcb097',LB.ink,1.3);
-}
 drawArm(true);
 if(head)local(c,hx,hy,p.head,()=>{c.scale(b.head*p.headScale,b.head);LB.drawFace(c,a,p.face,t,f.look??1,1-(f.hp||100)/(f.maxHp||100))});
 if(body&&f.hp/f.maxHp<.5){P(c,`M${tx-22} ${ty+46} l9-6 3 9 9-5 -7 16 -15-2Z`,a.skin,LB.ink,1.2);P(c,`M${tx+15} ${ty+31} l7 5 -9 3`,null,cs,2)}
