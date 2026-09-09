@@ -1,0 +1,489 @@
+{
+  "fights": 1000,
+  "seedBase": 190000,
+  "armed": {
+    "fights": 1000,
+    "wins": 585,
+    "winRate": "58.5%",
+    "meanSeconds": 14.15,
+    "meanDamage": 114.3,
+    "meanHits": 7.8,
+    "contactRate": "73.1%",
+    "meanThrows": 0.26
+  },
+  "unarmed": {
+    "fights": 1000,
+    "wins": 415,
+    "winRate": "41.5%",
+    "meanSeconds": 14.15,
+    "meanDamage": 100.9,
+    "meanHits": 10,
+    "contactRate": "71.8%",
+    "meanThrows": 0
+  },
+  "families": {
+    "Absurd": {
+      "fights": 84,
+      "wins": 57,
+      "winRate": "67.9%",
+      "meanSeconds": 14.15,
+      "meanDamage": 117.4,
+      "meanHits": 8.1,
+      "contactRate": "71.6%",
+      "meanThrows": 0.19
+    },
+    "Blade": {
+      "fights": 83,
+      "wins": 45,
+      "winRate": "54.2%",
+      "meanSeconds": 14.1,
+      "meanDamage": 116.2,
+      "meanHits": 8.37,
+      "contactRate": "74.6%",
+      "meanThrows": 0.29
+    },
+    "Blunt": {
+      "fights": 83,
+      "wins": 56,
+      "winRate": "67.5%",
+      "meanSeconds": 14.3,
+      "meanDamage": 118.8,
+      "meanHits": 7.93,
+      "contactRate": "73.6%",
+      "meanThrows": 0.22
+    },
+    "Heavy": {
+      "fights": 84,
+      "wins": 51,
+      "winRate": "60.7%",
+      "meanSeconds": 13.93,
+      "meanDamage": 116.9,
+      "meanHits": 6.54,
+      "contactRate": "73.9%",
+      "meanThrows": 0.21
+    },
+    "Household": {
+      "fights": 110,
+      "wins": 64,
+      "winRate": "58.2%",
+      "meanSeconds": 13.52,
+      "meanDamage": 107.5,
+      "meanHits": 7.47,
+      "contactRate": "73.7%",
+      "meanThrows": 0.25
+    },
+    "Improvised": {
+      "fights": 56,
+      "wins": 34,
+      "winRate": "60.7%",
+      "meanSeconds": 13.77,
+      "meanDamage": 113.8,
+      "meanHits": 7.41,
+      "contactRate": "74.1%",
+      "meanThrows": 0.29
+    },
+    "Kitchen": {
+      "fights": 112,
+      "wins": 59,
+      "winRate": "52.7%",
+      "meanSeconds": 14.49,
+      "meanDamage": 113.7,
+      "meanHits": 8.44,
+      "contactRate": "78.2%",
+      "meanThrows": 0.24
+    },
+    "Office": {
+      "fights": 138,
+      "wins": 84,
+      "winRate": "60.9%",
+      "meanSeconds": 14.37,
+      "meanDamage": 115.6,
+      "meanHits": 7.84,
+      "contactRate": "71.3%",
+      "meanThrows": 0.25
+    },
+    "Party": {
+      "fights": 83,
+      "wins": 63,
+      "winRate": "75.9%",
+      "meanSeconds": 12.51,
+      "meanDamage": 124.4,
+      "meanHits": 8,
+      "contactRate": "82.8%",
+      "meanThrows": 0.39
+    },
+    "Pole": {
+      "fights": 167,
+      "wins": 72,
+      "winRate": "43.1%",
+      "meanSeconds": 15.18,
+      "meanDamage": 107.3,
+      "meanHits": 7.71,
+      "contactRate": "66.2%",
+      "meanThrows": 0.31
+    }
+  },
+  "weapons": {
+    "Eviction bat": {
+      "fights": 28,
+      "wins": 21,
+      "winRate": "75.0%",
+      "meanSeconds": 13.25,
+      "meanDamage": 119.5,
+      "meanHits": 7.68,
+      "contactRate": "76.1%",
+      "meanThrows": 0.21
+    },
+    "Frying pan": {
+      "fights": 28,
+      "wins": 14,
+      "winRate": "50.0%",
+      "meanSeconds": 13.37,
+      "meanDamage": 112.4,
+      "meanHits": 8.11,
+      "contactRate": "87.4%",
+      "meanThrows": 0.21
+    },
+    "Fire extinguisher": {
+      "fights": 28,
+      "wins": 16,
+      "winRate": "57.1%",
+      "meanSeconds": 13.81,
+      "meanDamage": 115.7,
+      "meanHits": 6.32,
+      "contactRate": "75.7%",
+      "meanThrows": 0.21
+    },
+    "Office stapler": {
+      "fights": 28,
+      "wins": 24,
+      "winRate": "85.7%",
+      "meanSeconds": 12.35,
+      "meanDamage": 129.3,
+      "meanHits": 7.93,
+      "contactRate": "76.0%",
+      "meanThrows": 0.21
+    },
+    "Garden shovel": {
+      "fights": 28,
+      "wins": 14,
+      "winRate": "50.0%",
+      "meanSeconds": 13.64,
+      "meanDamage": 114.4,
+      "meanHits": 7.64,
+      "contactRate": "73.9%",
+      "meanThrows": 0.14
+    },
+    "Rubber chicken": {
+      "fights": 28,
+      "wins": 17,
+      "winRate": "60.7%",
+      "meanSeconds": 14.41,
+      "meanDamage": 115.7,
+      "meanHits": 8.79,
+      "contactRate": "77.1%",
+      "meanThrows": 0.18
+    },
+    "Traffic cone": {
+      "fights": 28,
+      "wins": 18,
+      "winRate": "64.3%",
+      "meanSeconds": 14.52,
+      "meanDamage": 120.7,
+      "meanHits": 7,
+      "contactRate": "64.8%",
+      "meanThrows": 0.29
+    },
+    "Pool cue": {
+      "fights": 28,
+      "wins": 17,
+      "winRate": "60.7%",
+      "meanSeconds": 14.74,
+      "meanDamage": 114.5,
+      "meanHits": 7.14,
+      "contactRate": "61.6%",
+      "meanThrows": 0.18
+    },
+    "Bread knife": {
+      "fights": 28,
+      "wins": 15,
+      "winRate": "53.6%",
+      "meanSeconds": 14.29,
+      "meanDamage": 111.8,
+      "meanHits": 8.39,
+      "contactRate": "74.6%",
+      "meanThrows": 0.25
+    },
+    "Rolling pin": {
+      "fights": 28,
+      "wins": 10,
+      "winRate": "35.7%",
+      "meanSeconds": 16.45,
+      "meanDamage": 103.7,
+      "meanHits": 8.5,
+      "contactRate": "69.9%",
+      "meanThrows": 0.25
+    },
+    "Meat tenderizer": {
+      "fights": 28,
+      "wins": 19,
+      "winRate": "67.9%",
+      "meanSeconds": 13.93,
+      "meanDamage": 117.2,
+      "meanHits": 7.36,
+      "contactRate": "72.1%",
+      "meanThrows": 0.21
+    },
+    "Toilet plunger": {
+      "fights": 28,
+      "wins": 18,
+      "winRate": "64.3%",
+      "meanSeconds": 12.59,
+      "meanDamage": 117,
+      "meanHits": 8.29,
+      "contactRate": "87.2%",
+      "meanThrows": 0.21
+    },
+    "Golf club": {
+      "fights": 28,
+      "wins": 9,
+      "winRate": "32.1%",
+      "meanSeconds": 14.67,
+      "meanDamage": 101.3,
+      "meanHits": 8.46,
+      "contactRate": "79.3%",
+      "meanThrows": 0.32
+    },
+    "Broken bottle": {
+      "fights": 28,
+      "wins": 16,
+      "winRate": "57.1%",
+      "meanSeconds": 12.53,
+      "meanDamage": 117.6,
+      "meanHits": 7.5,
+      "contactRate": "80.5%",
+      "meanThrows": 0.21
+    },
+    "Folding chair": {
+      "fights": 28,
+      "wins": 18,
+      "winRate": "64.3%",
+      "meanSeconds": 13.93,
+      "meanDamage": 118.4,
+      "meanHits": 6.5,
+      "contactRate": "71.4%",
+      "meanThrows": 0.07
+    },
+    "Keyboard": {
+      "fights": 28,
+      "wins": 16,
+      "winRate": "57.1%",
+      "meanSeconds": 16.62,
+      "meanDamage": 118,
+      "meanHits": 9.04,
+      "contactRate": "65.3%",
+      "meanThrows": 0.36
+    },
+    "Briefcase": {
+      "fights": 28,
+      "wins": 15,
+      "winRate": "53.6%",
+      "meanSeconds": 13.93,
+      "meanDamage": 104,
+      "meanHits": 5.79,
+      "contactRate": "68.0%",
+      "meanThrows": 0.25
+    },
+    "Cactus on a stick": {
+      "fights": 28,
+      "wins": 18,
+      "winRate": "64.3%",
+      "meanSeconds": 13.84,
+      "meanDamage": 113.6,
+      "meanHits": 7.25,
+      "contactRate": "66.1%",
+      "meanThrows": 0.14
+    },
+    "Wet-floor sign": {
+      "fights": 28,
+      "wins": 16,
+      "winRate": "57.1%",
+      "meanSeconds": 13.02,
+      "meanDamage": 106.9,
+      "meanHits": 7.82,
+      "contactRate": "84.8%",
+      "meanThrows": 0.29
+    },
+    "Steel umbrella": {
+      "fights": 28,
+      "wins": 8,
+      "winRate": "28.6%",
+      "meanSeconds": 16.81,
+      "meanDamage": 97.6,
+      "meanHits": 8.11,
+      "contactRate": "55.8%",
+      "meanThrows": 0.43
+    },
+    "Flamingo mallet": {
+      "fights": 28,
+      "wins": 23,
+      "winRate": "82.1%",
+      "meanSeconds": 12.04,
+      "meanDamage": 124.5,
+      "meanHits": 8.54,
+      "contactRate": "85.2%",
+      "meanThrows": 0.39
+    },
+    "Stop sign": {
+      "fights": 28,
+      "wins": 13,
+      "winRate": "46.4%",
+      "meanSeconds": 16.01,
+      "meanDamage": 106.2,
+      "meanHits": 7.82,
+      "contactRate": "61.3%",
+      "meanThrows": 0.46
+    },
+    "Vacuum cleaner": {
+      "fights": 28,
+      "wins": 15,
+      "winRate": "53.6%",
+      "meanSeconds": 13.85,
+      "meanDamage": 102.8,
+      "meanHits": 5.82,
+      "contactRate": "65.7%",
+      "meanThrows": 0.32
+    },
+    "Party cannon": {
+      "fights": 28,
+      "wins": 18,
+      "winRate": "64.3%",
+      "meanSeconds": 12.27,
+      "meanDamage": 123.3,
+      "meanHits": 7.57,
+      "contactRate": "83.0%",
+      "meanThrows": 0.32
+    },
+    "Pizza cutter": {
+      "fights": 28,
+      "wins": 21,
+      "winRate": "75.0%",
+      "meanSeconds": 13.9,
+      "meanDamage": 122.7,
+      "meanHits": 8.46,
+      "contactRate": "71.5%",
+      "meanThrows": 0.36
+    },
+    "Baguette": {
+      "fights": 28,
+      "wins": 14,
+      "winRate": "50.0%",
+      "meanSeconds": 14.25,
+      "meanDamage": 116,
+      "meanHits": 8.68,
+      "contactRate": "86.9%",
+      "meanThrows": 0.14
+    },
+    "Sledgehammer": {
+      "fights": 28,
+      "wins": 17,
+      "winRate": "60.7%",
+      "meanSeconds": 14.06,
+      "meanDamage": 116.6,
+      "meanHits": 6.79,
+      "contactRate": "74.8%",
+      "meanThrows": 0.36
+    },
+    "Swordfish": {
+      "fights": 28,
+      "wins": 22,
+      "winRate": "78.6%",
+      "meanSeconds": 14.2,
+      "meanDamage": 123,
+      "meanHits": 8.25,
+      "contactRate": "71.5%",
+      "meanThrows": 0.25
+    },
+    "Trophy": {
+      "fights": 27,
+      "wins": 16,
+      "winRate": "59.3%",
+      "meanSeconds": 15.78,
+      "meanDamage": 119.7,
+      "meanHits": 8.78,
+      "contactRate": "72.7%",
+      "meanThrows": 0.22
+    },
+    "Mop of shame": {
+      "fights": 27,
+      "wins": 10,
+      "winRate": "37.0%",
+      "meanSeconds": 14.45,
+      "meanDamage": 86.9,
+      "meanHits": 7.33,
+      "contactRate": "69.3%",
+      "meanThrows": 0.3
+    },
+    "Mic stand": {
+      "fights": 27,
+      "wins": 11,
+      "winRate": "40.7%",
+      "meanSeconds": 15.19,
+      "meanDamage": 109.8,
+      "meanHits": 7.04,
+      "contactRate": "69.6%",
+      "meanThrows": 0.3
+    },
+    "Giant toothbrush": {
+      "fights": 27,
+      "wins": 21,
+      "winRate": "77.8%",
+      "meanSeconds": 13.22,
+      "meanDamage": 123.2,
+      "meanHits": 8.48,
+      "contactRate": "72.1%",
+      "meanThrows": 0.15
+    },
+    "Tax binder": {
+      "fights": 27,
+      "wins": 14,
+      "winRate": "51.9%",
+      "meanSeconds": 14.16,
+      "meanDamage": 110,
+      "meanHits": 8.78,
+      "contactRate": "75.5%",
+      "meanThrows": 0.22
+    },
+    "Disco mace": {
+      "fights": 27,
+      "wins": 22,
+      "winRate": "81.5%",
+      "meanSeconds": 13.26,
+      "meanDamage": 125.4,
+      "meanHits": 7.89,
+      "contactRate": "80.2%",
+      "meanThrows": 0.44
+    },
+    "Divorce papers": {
+      "fights": 27,
+      "wins": 15,
+      "winRate": "55.6%",
+      "meanSeconds": 14.79,
+      "meanDamage": 116.3,
+      "meanHits": 7.7,
+      "contactRate": "72.9%",
+      "meanThrows": 0.19
+    },
+    "Museum laser sword": {
+      "fights": 27,
+      "wins": 14,
+      "winRate": "51.9%",
+      "meanSeconds": 15.53,
+      "meanDamage": 119.4,
+      "meanHits": 9.26,
+      "contactRate": "70.1%",
+      "meanThrows": 0.41
+    }
+  },
+  "verdict": "PASS: weapons have a measured advantage without suppressing unarmed upsets; every family remains inside the balance band."
+}
