@@ -6,8 +6,10 @@ LB.drawSever=function(c,x,y,width){
  else{LB.path(c,`M${-width} -3 L${-width*.6} -7 -3 -3 3 -6 ${width*.6} -3 ${width} 1 Q${width*.6} 10 0 7 Q${-width*.7} 8 ${-width} -3Z`,'#a62832',LB.ink,1.7);LB.path(c,'M-4-2 Q-6-8-1-9 Q4-11 5-5 L4 4-3 4Z','#f3dcc0',LB.ink,1);LB.path(c,`M${-width*.7} 4 l2 12 3-11 M${width*.6} 4 l-1 9 4-9`,null,'#b62c32',2)}
  c.restore();
 };
-LB.Finishers={count:0,deck:[],labels:{head:'HEADS WILL ROLL.',frontArm:'DISARMED. LITERALLY.',rearArm:'DISARMED. LITERALLY.',frontLeg:'LAST LEG. LOST.',rearLeg:'LAST LEG. LOST.',upperBody:'HALF THE BASTARD.'},
+LB.Finishers={count:0,deck:[],labels:{head:'HEADS WILL ROLL.',frontArm:'DISARMED. LITERALLY.',rearArm:'DISARMED. LITERALLY.',frontLeg:'LAST LEG. LOST.',rearLeg:'LAST LEG. LOST.',upperBody:'HALF THE BASTARD.',panPancake:'PANCAKED BEYOND RECOGNITION.',cueImpale:'SCRATCHED ON THE EIGHT BALL.',chairFold:'PLEASE RETURN CHAIR UPRIGHT.',laserSplit:'SEVERANCE PACKAGE APPROVED.',hammerLaunch:'HAMMERED INTO NEXT WEEK.',bottleStick:'MESSAGE IN A BASTARD.',signOff:'STOPPED PERMANENTLY.',partyPop:'PARTY FOUL. FATAL.'},weaponMoves:{2:{key:'panPancake',effect:'pancake'},8:{key:'cueImpale',effect:'impale'},9:{key:'bottleStick',effect:'impale'},14:{key:'bottleStick',effect:'impale'},15:{key:'chairFold',effect:'folded'},22:{key:'signOff',detach:'head'},24:{key:'partyPop',detach:'head',confetti:true},27:{key:'hammerLaunch',detach:'head'},36:{key:'laserSplit',detach:'upperBody'}},
  perform(winner,loser,forced,pose){
+  const weaponMove=!forced&&winner.weapon?this.weaponMoves[winner.weapon]:null;
+  if(weaponMove){this.count++;loser.finisherEffect={kind:weaponMove.effect||weaponMove.key,weapon:winner.weapon};if(weaponMove.detach)LB.Physics.detach(loser,weaponMove.detach,pose);if(weaponMove.effect==='impale')winner.weapon=0;if(weaponMove.confetti)for(let i=0;i<4;i++)LB.Particles.burst(loser.x+LB.rand(-35,35),loser.y-LB.rand(90,240),20,LB.pick(['#f7ce46','#e85c61','#71bda9','#8e76bd']),'confetti');if(!LB.settings.reducedGore)LB.Particles.blood(loser.x,loser.y-145,26,winner.facing);else LB.Particles.burst(loser.x,loser.y-145,28,'#e7d19c','dust');return weaponMove.key}
   let type=forced;
   if(!type){if(!this.count)type='head';else{if(!this.deck.length)this.deck=LB.shuffle(['head','frontArm','head','frontLeg','upperBody']);type=this.deck.pop()}}
   this.count++;

@@ -53,6 +53,7 @@ drawLeg(true);if(body&&a.bottom===3)P(c,`M${rx-hip} ${ry-6} Q${rx} ${ry+5} ${rx+
 drawArm(true);
 if(head)local(c,hx,hy,p.head,()=>{c.scale(b.head*p.headScale,b.head);LB.drawFace(c,a,p.face,t,f.look??1,1-(f.hp||100)/(f.maxHp||100))});
 if(body&&torn){L(c,[rx-hip*.45,ry-5,rx-hip*.5,ry+4],cs,1.4);L(c,[rx+hip*.2,ry-3,rx+hip*.28,ry+5],cs,1.4)}
+if(body&&f.finisherEffect?.kind==='impale'){local(c,tx,ty+43,f.facing>0?-1.47:1.47,()=>LB.drawWeapon(c,f.finisherEffect.weapon,t));if(!LB.settings.reducedGore)LB.drawSever(c,tx,ty+28,10)}
 if(!only){
  if(f.headDetached&&body)LB.drawSever(c,tx,ty-21,14);
  if(f.upperDetached)LB.drawSever(c,rx,ry+2,hip);

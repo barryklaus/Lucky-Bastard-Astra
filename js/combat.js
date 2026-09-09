@@ -23,10 +23,12 @@ lethal(winner,loser,meta){
  const first=LB.Finishers.count===0;
  const cinematic=meta.rare||first||Math.random()<Math.min(.95,.72+LB.abilityValue(winner,'finisher'));
  const outcome=cinematic?LB.Finishers.perform(winner,loser,meta.finisher,pose):null;
+ const momentum=winner.combo>=3;
  loser.action=null;loser.hitTimer=10;loser.fallProgress=0;if(loser.state!=='thrown')loser.state='defeat';
  winner.action=null;winner.state='victory';
  const label=outcome?LB.Finishers.labels[outcome]:'KNOCKED THE FUCK OUT.';
- LB.game.finalHold={elapsed:0,duration:4,winner,loser,label,finisher:outcome};
+ LB.game.finalHold={elapsed:0,duration:4,winner,loser,label,finisher:outcome,momentum};
+ if(momentum){LB.Particles.burst(loser.x,loser.y-155,38,'#f7ce46');LB.Particles.burst(loser.x,loser.y-145,28,'#71bda9','confetti');LB.Particles.word(loser.x,loser.y-260,'MOMENTUM MURDER!','#fff0a6')}
  LB.game.hitStop=.1;LB.Camera.shake=10;LB.Dialogue.say(winner,'win',true);LB.UI.announce(label,4);LB.Audio.hit('critical');LB.Audio.win();LB.Crowd.react('big');
 }
 };

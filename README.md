@@ -36,7 +36,7 @@ Open **index.html** in a current browser. No installation, build step, server, i
 4. Survive 25 rounds across five environments. Bosses appear every fifth round.
 5. On defeat, one 15-second trivia attempt is available per environment. A correct answer revives your fighter at 60% health. An incorrect answer or timeout ends the run. Second Wind is a separate, single-use ability.
 
-The Training Lab offers infinite health, individual combat actions, all weapons, all special attacks, arena selection, automatic sparring, and dedicated **Decapitate**, **Dismember** (alternating arm and leg), and **Waist split** controls. Reset returns both fighters to their starting positions.
+The Training Lab offers infinite health, individual combat actions, all weapons, all special attacks, arena selection, automatic sparring, and dedicated **Weapon finisher**, **Combo cinema**, **Crowd takeover**, **Decapitate**, **Dismember** (alternating arm and leg), and **Waist split** controls. Reset returns both fighters to their starting positions.
 
 Use **Pause** or **Escape** to pause combat. Sound, quality, and Reduced Gore can be changed in the pause menu. Sound is synthesized locally and starts only after a user gesture. Save & Leave stores the start-of-round build on this browser. Resume Run restarts that round. Browser storage may be unavailable in some private/file browsing configurations; normal play still works.
 
@@ -56,6 +56,8 @@ Use **Pause** or **Escape** to pause combat. Sound, quality, and Reduced Gore ca
 Weapon balance is checked with a reproducible 1,000-fight harness. Reach-aware spacing and visible striking-section collision give armed fighters a measured advantage while preserving unarmed upsets. Full methodology and results are in `tests/BALANCE.md` and `tests/balance-results.json`.
 
 Final blows use a four-second ultra-slow cinematic curve with an opening freeze and deep impact slowdown. Head sway, body sway and step-back jump briefly slow the whole fight and tighten the camera around the miss.
+
+Selected weapons now earn bespoke finishing payoffs: pan flattening, embedded pool cues and blades, chair folding, stop-sign and sledgehammer launches, party-cannon confetti decapitation, and a laser-sword waist split. A lethal three-hit-or-longer combination adds a gold momentum camera sweep and crowd eruption. Filling positive popularity starts a 2.5-second crowd takeover with tomatoes, cups, cans, and shoes; the barrage can stagger and drain stamina but cannot remove health.
 
 Math trivia now uses basic arithmetic, times tables, exact division, counting, money, doubles and halves. Advanced maths, number-base conversion, clock angles, powers and permutations have been removed. The deck also includes curated factual questions; choices are shuffled on presentation. There is no instant replay, remote telemetry, asset download, or network dependency. Scenery and audience projectiles cannot remove health.
 

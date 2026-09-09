@@ -54,3 +54,7 @@ The fixed-seed balance harness runs exactly 1,000 mirrored-stat fights, alternat
 ## Cinematic slow-motion update
 
 Final blows now freeze for 140 ms, run at 7% speed through the opening impact, rise through 22% and 55% speed, then accelerate during the last 1.75 seconds so detached parts and falls still complete inside the required four-second hold. Head sway, body sway and step-back jump trigger a 22%-speed dodge window lasting 480–620 ms with a quick camera focus. Tests verify all three dodge types, the ultra-slow final opening, the unchanged four-second transition, and settled finisher physics. Asset cache identifiers are now 1.0.11.
+
+## Spectacle systems update
+
+Nine selected weapons route lethal hits into eight authored outcomes, including face flattening, embedded implements, chair folding, launched heads, confetti decapitation and a laser-sword waist split. A lethal combination at three or more confirmed hits activates the gold momentum camera treatment without changing the four-second final hold. Full positive popularity now starts a 2.5-second crowd takeover whose bounded projectile pool includes tomatoes, drink cups, cans and sneakers. Crowd objects only stagger and drain stamina. Training Lab controls expose all three systems directly. Automated checks cover outcome selection and artwork, momentum activation, crowd duration, its 36-object bound, and the nonlethal rule. Asset cache identifiers are now 1.0.12.
