@@ -16,3 +16,7 @@
 The browser testing tool blocked file:// navigation. Direct double-click launch was therefore not browser-verified. The build uses classic local script files and local CSS, with no fetch, imports, installation, or network dependency. Physical Retina and 4K hardware were not available; viewport checks do not replace device testing.
 
 The artwork uses a shared articulated rig and authored pose families. Named special attacks reuse these families; this is not a collection of independently frame-animated sequences. Trivia includes deterministic mathematical variants, and dialogue includes authored lines with alternate endings.
+
+## Faster combat update
+
+Attack, movement, recovery and stamina timings were retuned. All simulation checks pass after this update, including a successful 25-level run, all weapon/special contacts, planted-foot drift, and the unchanged four-second knockout hold. Across the same 30 seeded matchups, mean time to knockout changed from 28.9 seconds to 18.6 seconds. The latest timing changes have not been visually rechecked because the host Mac is locked.

@@ -2,6 +2,10 @@
 
 An original adult-cartoon automatic fighting survival game made with HTML, CSS, vanilla JavaScript, and Canvas 2D. Contains strong language and optional cartoon gore. Reduced Gore and Performance quality are enabled by default.
 
+## Combat pace update
+
+The latest build speeds up attacks, approach movement, recovery, and stamina regeneration. The four-second knockout cinematic and 15-second trivia timer retain their original timing.
+
 ## Play
 
 Open **index.html** in a current browser. No installation, build step, server, internet connection, or external assets are needed. All artwork is drawn by the game's own Canvas code. For GitHub Pages, upload the contents of this folder and enable Pages for the containing branch.
