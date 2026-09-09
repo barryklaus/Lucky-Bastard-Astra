@@ -2,6 +2,10 @@
 
 An original adult-cartoon automatic fighting survival game made with HTML, CSS, vanilla JavaScript, and Canvas 2D. Contains strong language and cartoon gore, enabled by default. Reduced Gore is an opt-in setting; Performance is the default quality.
 
+## Character attachment update
+
+Raised hands now point away from the elbow, with upward victory gestures. All four ear styles attach to each of the ten head contours; ear size changes preserve their attachment points.
+
 ## Combat pace update
 
 The latest build further speeds up attacks, approach movement, recovery, and stamina regeneration. The 30 seeded test fights average about 14 seconds to knockout. The four-second knockout cinematic and 15-second trivia timer retain their original timing.

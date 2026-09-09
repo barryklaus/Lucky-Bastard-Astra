@@ -49,3 +49,30 @@ test('Reduced Gore hides blood and renders substitute effects without breaking f
 test('Blood particles and ground splashes are bounded',()=>{L.Particles.items=[];L.Particles.stains=[];for(let i=0;i<50;i++){L.Particles.blood(i*45,300,28);L.Particles.stain(i*45,576,20)}assert(L.Particles.items.length<=180);assert(L.Particles.stains.length<=36)});
 
 test('Final blow begins with hit-stop before slow motion',()=>{const[p,e]=setup(102);e.hp=0;L.Combat.lethal(p,e,{rare:true,finisher:'head'});const part=L.Physics.parts[0],x=part.x,y=part.y;tick(4);assert.equal(part.x,x);assert.equal(part.y,y);tick(8);assert.notEqual(part.y,y);assert(L.game.finalHold.elapsed<4)});
+
+test('Open hands and victory fingers point beyond the wrist, away from the elbow',()=>{
+ for(const pose of ['victory','open','block','relaxed'])for(const direction of [-Math.PI/2,0,Math.PI/2,Math.PI]){
+  const cv=createCanvas(160,160),c=cv.getContext('2d');c.translate(80,80);c.rotate(direction-Math.PI/2);L.drawHand(c,pose,'#d8956b');
+  const rgba=c.getImageData(0,0,160,160).data;let forward=0,backward=0;
+  for(let y=0;y<160;y++)for(let x=0;x<160;x++)if(rgba[(y*160+x)*4+3]>64){const d=(x-80)*Math.cos(direction)+(y-80)*Math.sin(direction);if(d>22)forward++;if(d<-22)backward++}
+  assert(forward>50&&forward>backward*3,pose+' fingers turn toward the elbow at '+direction);
+ }
+});
+test('Every ear size stays connected to all ten head silhouettes',()=>{
+ for(let head=0;head<10;head++)for(let ears=0;ears<4;ears++){
+  const a={...L.defaultAppearance(),head,ears,hair:11,beard:0,accessory:0,details:5},cv=createCanvas(220,220),c=cv.getContext('2d');c.translate(110,110);c.scale(1.4,1.4);L.drawFace(c,a,'hurt',2);
+  const rgba=c.getImageData(0,0,220,220).data,seen=new Uint8Array(220*220),queue=[110*220+110];seen[queue[0]]=1;
+  for(let i=0;i<queue.length;i++){const at=queue[i],x=at%220,y=Math.floor(at/220);for(const next of [x?at-1:-1,x<219?at+1:-1,y?at-220:-1,y<219?at+220:-1])if(next>=0&&!seen[next]&&rgba[next*4+3]>64){seen[next]=1;queue.push(next)}}
+  const size=ears===1?1.35:ears===3?.7:1;
+  for(let side=0;side<2;side++){const x=Math.round(110+(L.faceEarAnchors[head][side]+(side?1:-1)*10*size)*1.4),y=Math.round(110+(side?2:0)*1.4);assert(seen[y*220+x],`Floating ear: head ${head}, ears ${ears}, side ${side}`)}
+ }
+});
+test('Corrected wrist and ear artwork renders in victory, guard and weapon poses',()=>{
+ const cv=createCanvas(1800,1000),c=cv.getContext('2d');c.fillStyle='#e3d7b5';c.fillRect(0,0,1800,1000);
+ const poses=['victory','block','idle','punch','victory'];
+ for(let i=0;i<10;i++){const a={...L.defaultAppearance(),body:i,head:i,ears:1,hair:i,top:i,accessory:i===2?5:0,cloth:L.palette.cloth[i%8]};const f=new L.Fighter(a,true);f.x=160+(i%5)*360;f.y=445+Math.floor(i/5)*490;f.state=poses[i%5];f.weapon=i%5===4?9:0;f.facing=i<5?1:-1;f.action=f.state==='punch'?{kind:'punch',time:.2,duration:.45,impact:.22,target:'head'}:null;L.Rig.draw(c,f,2);L.text(c,L.options.head[i]+' / '+f.state,f.x,f.y+38,17,L.ink,'Arial','center')}
+ fs.writeFileSync(path.join(ROOT,'tests/anatomy-fix-render.png'),cv.toBuffer('image/png'));
+ const faces=createCanvas(1400,660),fc=faces.getContext('2d');fc.fillStyle='#e3d7b5';fc.fillRect(0,0,1400,660);
+ for(let head=0;head<10;head++)for(let ears=0;ears<4;ears++){fc.save();fc.translate(70+head*140,95+ears*165);L.drawFace(fc,{...L.defaultAppearance(),head,ears,hair:11,beard:0,accessory:0,details:5},'hurt',2);L.text(fc,L.options.ears[ears],0,65,12,L.ink,'Arial','center');fc.restore()}
+ fs.writeFileSync(path.join(ROOT,'tests/ear-attachment-render.png'),faces.toBuffer('image/png'));
+});

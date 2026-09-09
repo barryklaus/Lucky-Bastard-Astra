@@ -28,3 +28,7 @@ Advanced maths has been replaced with basic arithmetic and counting. A focused t
 ## Standard gore and faster action update
 
 Gore defaults on. Tests cover head, arm, leg, and upper-body detachment using original rig layers, source-layer removal, floor settling before the four-second hold ends, reset/restoration, guaranteed first-knockout decapitation, Reduced Gore substitutes, and bounded blood pools. A native Canvas contact sheet was visually inspected for all four finishers in flight and after landing. The 30 seeded matchups now average 14.1 seconds to knockout. All weapon and special contacts, progression, and resurrection checks still pass. The latest changes have not been rechecked in the live browser because the host Mac is locked.
+
+## Wrist orientation and ear attachment update
+
+Pixel checks verify that victory, open, block and relaxed hand fingers extend away from the elbow in four directions. A connected-pixel check verifies both ears across all 40 head/ear combinations. Native Canvas sheets were inspected for victory, guard, idle, punch and weapon poses with both fighter facings, and all head/ear variants. The complete existing suite passes, including all 36 weapon contacts and all 25 special contacts. Browser verification and publishing remain blocked by the locked Mac. Asset cache identifiers are now 1.0.6.

@@ -21,3 +21,6 @@ PASS First ordinary knockout guarantees an anatomical finisher
 PASS Reduced Gore hides blood and renders substitute effects without breaking finishers
 PASS Blood particles and ground splashes are bounded
 PASS Final blow begins with hit-stop before slow motion
+PASS Open hands and victory fingers point beyond the wrist, away from the elbow
+PASS Every ear size stays connected to all ten head silhouettes
+PASS Corrected wrist and ear artwork renders in victory, guard and weapon poses
