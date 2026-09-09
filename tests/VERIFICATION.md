@@ -58,3 +58,7 @@ Final blows now freeze for 140 ms, run at 7% speed through the opening impact, r
 ## Spectacle systems update
 
 Nine selected weapons route lethal hits into eight authored outcomes, including face flattening, embedded implements, chair folding, launched heads, confetti decapitation and a laser-sword waist split. A lethal combination at three or more confirmed hits activates the gold momentum camera treatment without changing the four-second final hold. Full positive popularity now starts a 2.5-second crowd takeover whose bounded projectile pool includes tomatoes, drink cups, cans and sneakers. Crowd objects only stagger and drain stamina. Training Lab controls expose all three systems directly. Automated checks cover outcome selection and artwork, momentum activation, crowd duration, its 36-object bound, and the nonlethal rule. Asset cache identifiers are now 1.0.12.
+
+## Two-arm guard update
+
+The neutral combat pose now places both fists beyond their shoulder silhouette and above the shoulder line, with separately solved upper arms and forearms forming a readable L guard. The rear arm stays in its correct depth layer while remaining visible outside the torso. Chaos-gremlin fighters and a stable minority of other personalities lower both hands during a brief 2.6-second brave window in an 11-second idle cycle. Automated geometry checks cover all ten body types and both facing directions, and a native Canvas contact sheet verifies the final silhouettes. Asset cache identifiers are now 1.0.13.

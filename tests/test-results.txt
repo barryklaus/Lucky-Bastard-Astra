@@ -26,6 +26,7 @@ PASS All three dodges trigger readable slow motion and camera focus
 PASS Weapon-specific finishers select distinct outcomes and artwork
 PASS Three-hit finishers trigger momentum camera and crowd eruption
 PASS Full popularity triggers a bounded nonlethal crowd takeover
+PASS Fight stance keeps both L-guard arms visible with a stable brave variation
 PASS Open hands and victory fingers point beyond the wrist, away from the elbow
 PASS Every ear size stays connected to all ten head silhouettes
 PASS Corrected wrist and ear artwork renders in victory, guard and weapon poses

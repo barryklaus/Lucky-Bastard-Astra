@@ -10,6 +10,10 @@ Belts and buckles have been removed from every fighter and spectator. Upper eyel
 
 Grapple hands now follow the opponent's animated shoulder joints during grabs, lifts and carries. Damage changes the shirt's actual hem silhouette into connected tears instead of painting a skin-colored patch over the fabric.
 
+## Guard stance update
+
+Both arms remain readable during combat. The standard stance raises both fists beyond the shoulder line with clear L-shaped elbows for defense and parries. Brave fighters occasionally lower both hands for a short, stable taunt before returning to guard.
+
 ## Sneakers update
 
 Every fighter and spectator wears low-top sneakers. The creator offers eight sneaker designs; previously saved footwear selections automatically use these replacements.

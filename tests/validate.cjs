@@ -60,6 +60,8 @@ test('Three-hit finishers trigger momentum camera and crowd eruption',()=>{const
 
 test('Full popularity triggers a bounded nonlethal crowd takeover',()=>{const[p,e]=setup(420);const hp=e.hp;assert(L.Crowd.takeover(p));for(let i=0;i<180;i++){crowdUpdate(1/60,i/60);L.Physics.update(1/60)}assert.equal(L.Crowd.storm,null);assert(L.Physics.projectiles.length<=36);assert.equal(e.hp,hp)});
 
+test('Fight stance keeps both L-guard arms visible with a stable brave variation',()=>{const cv=createCanvas(2040,920),c=cv.getContext('2d');c.fillStyle='#e3d7b5';c.fillRect(0,0,2040,920);for(let i=0;i<10;i++)for(let side=0;side<2;side++){const a=L.defaultAppearance(),f=new L.Fighter(a,true);a.body=i;f.appearance.body=i;f.x=105+(i%5)*405;f.y=side?875:425;f.facing=side?-1:1;f.state='idle';f.braveStance=false;const p=L.Animation.pose(f,2),b=L.bodySpecs[i],top=-b.leg-b.torso;assert(p.frontHand.x>b.w+20&&p.rearHand.x<-b.w-20,'guard hand hidden for body '+i);assert(p.frontHand.y<top&&p.rearHand.y<top,'guard hand is not raised for body '+i);L.Rig.draw(c,f,2);if(side===1){f.braveStance=true;const low=L.Animation.pose(f,9);assert(low.frontHand.y>top+45&&low.rearHand.y>top+45,'brave hands did not drop')}}fs.writeFileSync(path.join(ROOT,'tests/guard-stance-render.png'),cv.toBuffer('image/png'))});
+
 test('Open hands and victory fingers point beyond the wrist, away from the elbow',()=>{
  for(const pose of ['victory','open','block','relaxed'])for(const direction of [-Math.PI/2,0,Math.PI/2,Math.PI]){
   const cv=createCanvas(160,160),c=cv.getContext('2d');c.translate(80,80);c.rotate(direction-Math.PI/2);L.drawHand(c,pose,'#d8956b');
