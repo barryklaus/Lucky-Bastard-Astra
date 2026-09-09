@@ -13,4 +13,4 @@ LB.shade=function(hex,n){let h=hex.replace('#','');return '#'+[0,2,4].map(i=>LB.
 LB.text=function(c,str,x,y,size=16,color=LB.ink,font='Arial',align='left'){c.fillStyle=color;c.font=`900 ${size}px ${font}`;c.textAlign=align;c.fillText(str,x,y)};
 LB.safe=function(s){return String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))};
 LB.storage={get(k,f){try{return JSON.parse(localStorage.getItem('lb-'+k))??f}catch{return f}},set(k,v){try{localStorage.setItem('lb-'+k,JSON.stringify(v))}catch{}}};
-LB.settings={quality:'performance',sound:false,reducedGore:true};
+LB.settings={quality:'performance',sound:false,reducedGore:false};

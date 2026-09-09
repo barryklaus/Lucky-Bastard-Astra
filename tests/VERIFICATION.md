@@ -1,6 +1,6 @@
 # Verification
 
-- All 19 JavaScript files parse and initialize in a DOM/Canvas test harness.
+- All 20 JavaScript files parse and initialize in a DOM/Canvas test harness.
 - 1,000 unique trivia prompts with four unique choices and exactly one included answer.
 - 36 distinct weapon paths, 30 abilities, 25 special sequences, 336 fighter dialogue strings, and 30 crowd shouts.
 - All 36 weapon contact checks and all 25 special sequence contact checks pass.
@@ -24,3 +24,7 @@ Attack, movement, recovery and stamina timings were retuned. All simulation chec
 ## Basic math trivia update
 
 Advanced maths has been replaced with basic arithmetic and counting. A focused trivia check verified all 1,000 unique prompts, all four-choice answer sets, all 925 numerical/counting answers independently from the question text, and draw-without-replacement behavior. Times tables use factors 1–10; division questions have whole-number answers. The 15-second timer and resurrection rules are unchanged. See `trivia-results.txt`.
+
+## Standard gore and faster action update
+
+Gore defaults on. Tests cover head, arm, leg, and upper-body detachment using original rig layers, source-layer removal, floor settling before the four-second hold ends, reset/restoration, guaranteed first-knockout decapitation, Reduced Gore substitutes, and bounded blood pools. A native Canvas contact sheet was visually inspected for all four finishers in flight and after landing. The 30 seeded matchups now average 14.1 seconds to knockout. All weapon and special contacts, progression, and resurrection checks still pass. The latest changes have not been rechecked in the live browser because the host Mac is locked.
