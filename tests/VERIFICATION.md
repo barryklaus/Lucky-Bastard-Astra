@@ -66,3 +66,7 @@ The neutral combat pose now places both fists beyond their shoulder silhouette a
 ## Exchange cadence and knockdown update
 
 Clean exchanges now create a 300–480 ms mutual guard reset, with additional recovery after kicks, weapons, throws and specials. Ordinary punches, combinations, kicks and weapons gain graduated nonlethal knockdown chances; the sampled 16 fights produce 27 knockdowns, spend 11% of close-range time in visible mutual resets, and average 16.3 seconds. A standing fighter waits while the opponent falls and completes a 620 ms get-up. After 45 seconds, range-aware pressure prevents rare defensive deadlocks without bypassing visible weapon reach. The primary and holdout 1,000-fight balance sets record 60.3% and 58.1% armed wins with 16.2- and 16.7-second means. Asset cache identifiers are now 1.0.14.
+
+## Static cargo-patch removal
+
+The two cargo-pocket rectangles previously drawn in root space after each rotating leg have been removed. Cargo trousers retain their wider silhouette, limb-following cel shading, fold lines and sneaker layering without any free-floating overlay. A native Canvas sheet covers idle, walking, running, kicking, knockdown and get-up poses in both facing directions, and an automated source check prevents the detached pocket path from returning. Asset cache identifiers are now 1.0.15.
