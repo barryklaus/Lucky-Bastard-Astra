@@ -2,6 +2,10 @@
 
 An original adult-cartoon automatic fighting survival game made with HTML, CSS, vanilla JavaScript, and Canvas 2D. Contains strong language and cartoon gore, enabled by default. Reduced Gore is an opt-in setting; Performance is the default quality.
 
+## Sneakers update
+
+Every fighter and spectator wears low-top sneakers. The creator offers eight sneaker designs; previously saved footwear selections automatically use these replacements.
+
 ## Character attachment update
 
 Raised hands now point away from the elbow, with upward victory gestures. All four ear styles attach to each of the ten head contours; ear size changes preserve their attachment points.

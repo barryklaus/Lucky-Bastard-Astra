@@ -32,3 +32,7 @@ Gore defaults on. Tests cover head, arm, leg, and upper-body detachment using or
 ## Wrist orientation and ear attachment update
 
 Pixel checks verify that victory, open, block and relaxed hand fingers extend away from the elbow in four directions. A connected-pixel check verifies both ears across all 40 head/ear combinations. Native Canvas sheets were inspected for victory, guard, idle, punch and weapon poses with both fighter facings, and all head/ear variants. The complete existing suite passes, including all 36 weapon contacts and all 25 special contacts. Browser verification and publishing remain blocked by the locked Mac. Asset cache identifiers are now 1.0.6.
+
+## Low-top sneakers update
+
+All eight footwear IDs now draw low-top sneakers, including previously saved selections. Creator labels use sneaker names and the shared renderer covers fighters, spectators and detached legs. The existing native Canvas character sheet was visually inspected across all eight styles. The existing suite passes, including planted walking feet, kick and weapon contact, finishers, wrist orientation and ear attachment. Browser verification remains unavailable while the Mac is locked. Asset cache identifiers are now 1.0.7.
