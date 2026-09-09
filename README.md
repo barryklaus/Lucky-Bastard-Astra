@@ -24,7 +24,7 @@ Raised hands now point away from the elbow, with upward victory gestures. All fo
 
 ## Combat pace update
 
-The latest build further speeds up attacks, approach movement, recovery, and stamina regeneration. The 30 seeded test fights average about 14 seconds to knockout. The four-second knockout cinematic and 15-second trivia timer retain their original timing.
+Attacks and approach movement stay quick, while clean exchanges now end in a short mutual guard reset. Heavy actions recover more deliberately, ordinary strikes can cause knockdowns, and the standing fighter waits through the fall and get-up instead of attacking continuously. The cadence sample averages about 16.3 seconds to knockout. The four-second knockout cinematic and 15-second trivia timer retain their original timing.
 
 ## Finishers
 
@@ -57,7 +57,7 @@ Use **Pause** or **Escape** to pause combat. Sound, quality, and Reduced Gore ca
 - `js/camera.js`, `particles.js`, `audio.js`: camera, bounded effects and synthesized sound.
 - `tests/`: developer validation and test results; not required for play.
 
-Weapon balance is checked with a reproducible 1,000-fight harness. Reach-aware spacing and visible striking-section collision give armed fighters a measured advantage while preserving unarmed upsets. Full methodology and results are in `tests/BALANCE.md` and `tests/balance-results.json`.
+Weapon balance is checked with a reproducible 1,000-fight harness plus an independent 1,000-fight holdout. Reach-aware spacing and visible striking-section collision give armed fighters a measured advantage while preserving unarmed upsets. The tactical contact metric treats blocks and dodges as defended attempts. Full methodology and results are in `tests/BALANCE.md` and `tests/balance-results.json`.
 
 Final blows use a four-second ultra-slow cinematic curve with an opening freeze and deep impact slowdown. Head sway, body sway and step-back jump briefly slow the whole fight and tighten the camera around the miss.
 

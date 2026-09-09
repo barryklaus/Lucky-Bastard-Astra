@@ -62,3 +62,7 @@ Nine selected weapons route lethal hits into eight authored outcomes, including 
 ## Two-arm guard update
 
 The neutral combat pose now places both fists beyond their shoulder silhouette and above the shoulder line, with separately solved upper arms and forearms forming a readable L guard. The rear arm stays in its correct depth layer while remaining visible outside the torso. Chaos-gremlin fighters and a stable minority of other personalities lower both hands during a brief 2.6-second brave window in an 11-second idle cycle. Automated geometry checks cover all ten body types and both facing directions, and a native Canvas contact sheet verifies the final silhouettes. Asset cache identifiers are now 1.0.13.
+
+## Exchange cadence and knockdown update
+
+Clean exchanges now create a 300–480 ms mutual guard reset, with additional recovery after kicks, weapons, throws and specials. Ordinary punches, combinations, kicks and weapons gain graduated nonlethal knockdown chances; the sampled 16 fights produce 27 knockdowns, spend 11% of close-range time in visible mutual resets, and average 16.3 seconds. A standing fighter waits while the opponent falls and completes a 620 ms get-up. After 45 seconds, range-aware pressure prevents rare defensive deadlocks without bypassing visible weapon reach. The primary and holdout 1,000-fight balance sets record 60.3% and 58.1% armed wins with 16.2- and 16.7-second means. Asset cache identifiers are now 1.0.14.
