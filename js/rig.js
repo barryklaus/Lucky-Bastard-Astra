@@ -33,12 +33,13 @@ LB.Rig={draw(c,f,t,opts={}){const a=f.appearance,b=LB.bodySpecs[a.body],p=f.pose
 if(body&&a.top===6){P(c,`M${torsoPt.x-28} ${torsoPt.y+3} Q${torsoPt.x-56} ${torsoPt.y-35} ${torsoPt.x-4} ${torsoPt.y-30} Q${torsoPt.x+30} ${torsoPt.y-24} ${torsoPt.x+25} ${torsoPt.y+12}Z`,cs)}
 const hx=torsoPt.x+Math.sin(p.head)*10,hy=torsoPt.y-38;if(head)local(c,hx,hy,p.head,()=>{if([6,9,13].includes(a.hair)){let sw=Math.sin(t*3)*4;P(c,`M-25-30 Q-54-22-50 12 L${-56+sw} 47 -36 36 -29 43 -21 2Z`,a.hairColor);P(c,'M-36-8 Q-42 14-41 27',null,LB.shade(a.hairColor,25),2)}});
 drawArm(false);drawLeg(false);
-const w=b.w,hip=b.hip,tx=torsoPt.x,ty=torsoPt.y,rx=root.x,ry=root.y;
+const w=b.w,hip=b.hip,tx=torsoPt.x,ty=torsoPt.y,rx=root.x,ry=root.y,damage=1-(f.hp||0)/(f.maxHp||1),torn=damage>.5,shredded=damage>.76;
 if(body){
 P(c,`M${torsoPt.x-13} ${torsoPt.y-24} L${torsoPt.x+14} ${torsoPt.y-22} ${torsoPt.x+17} ${torsoPt.y+13} Q${torsoPt.x} ${torsoPt.y+26} ${torsoPt.x-18} ${torsoPt.y+13}Z`,a.skin);P(c,`M${torsoPt.x-13} ${torsoPt.y-20} L${torsoPt.x+10} ${torsoPt.y-16} ${torsoPt.x+9} ${torsoPt.y+7} ${torsoPt.x-13} ${torsoPt.y+2}Z`,sh,null);
 // Each body uses separate shoulder, waist and hip dimensions; curves alter the silhouette.
 let jacket=[3,4,6,8].includes(a.top),waist=[6,8].includes(a.body)?w*1.12:a.body===7?hip*.82:hip;
-P(c,`M${tx-14} ${ty+2} Q${tx-w*.8} ${ty-2} ${tx-w} ${ty+20} Q${tx-w-8} ${ty+48} ${rx-waist} ${ry-10} L${rx-hip} ${ry+8} Q${rx} ${ry+19} ${rx+hip} ${ry+7} Q${rx+w+10} ${ty+61} ${tx+w} ${ty+20} Q${tx+w*.85} ${ty+1} ${tx+14} ${ty+2} Q${tx} ${ty+22} ${tx-14} ${ty+2}Z`,a.cloth,LB.ink,3.2);
+const hem=torn?`L${rx-hip} ${ry+4} L${rx-hip*.65} ${ry+7} L${rx-hip*.42} ${ry-4-(shredded?5:0)} L${rx-hip*.1} ${ry+8} L${rx+hip*.2} ${ry-(shredded?7:1)} L${rx+hip*.5} ${ry+8} L${rx+hip} ${ry+2}`:`L${rx-hip} ${ry+8} Q${rx} ${ry+19} ${rx+hip} ${ry+7}`;
+P(c,`M${tx-14} ${ty+2} Q${tx-w*.8} ${ty-2} ${tx-w} ${ty+20} Q${tx-w-8} ${ty+48} ${rx-waist} ${ry-10} ${hem} Q${rx+w+10} ${ty+61} ${tx+w} ${ty+20} Q${tx+w*.85} ${ty+1} ${tx+14} ${ty+2} Q${tx} ${ty+22} ${tx-14} ${ty+2}Z`,a.cloth,LB.ink,3.2);
 P(c,`M${tx+w-12} ${ty+17} Q${tx+w+5} ${ty+53} ${rx+hip-6} ${ry+4} L${rx+hip-22} ${ry+6} Q${tx+w-6} ${ty+44} ${tx+w-21} ${ty+17}Z`,cs,null);
 P(c,`M${tx-17} ${ty+4} Q${tx-3} ${ty+25} ${tx+17} ${ty+4}`,null,LB.shade(a.cloth,-45),4);
 if(jacket){P(c,`M${tx-13} ${ty+9} L${tx-17} ${ty+32} ${rx-13} ${ry+7} ${rx+10} ${ry+10} ${tx+13} ${ty+18}Z`,'#d7caa7',LB.ink,1.6);if(a.top===3||a.top===8){P(c,`M${tx-14} ${ty+3} L${tx-26} ${ty+25} ${tx-15} ${ty+30} ${tx-22} ${ty+43} ${tx-7} ${ty+48} ${tx-3} ${ty+22}Z`,cs);P(c,`M${tx+14} ${ty+4} L${tx+26} ${ty+23} ${tx+16} ${ty+30} ${tx+21} ${ty+39} ${tx+6} ${ty+52}Z`,cs)}else{L(c,[tx,ty+20,rx,ry+8],'#cfb983',2);for(let y=ty+24;y<ry;y+=6)L(c,[tx-3,y,tx+3,y],LB.ink,1)}}
@@ -51,7 +52,7 @@ if(a.accessory===6)P(c,`M${tx-16} ${ty+7} Q${tx-6} ${ty+40} ${tx+15} ${ty+8}`,nu
 drawLeg(true);if(body&&a.bottom===3)P(c,`M${rx-hip} ${ry-6} Q${rx} ${ry+5} ${rx+hip} ${ry-4} L${rx+hip+12} ${ry+43} Q${rx} ${ry+58} ${rx-hip-12} ${ry+42}Z`,a.pants,LB.ink,2.5);
 drawArm(true);
 if(head)local(c,hx,hy,p.head,()=>{c.scale(b.head*p.headScale,b.head);LB.drawFace(c,a,p.face,t,f.look??1,1-(f.hp||100)/(f.maxHp||100))});
-if(body&&f.hp/f.maxHp<.5){P(c,`M${tx-22} ${ty+46} l9-6 3 9 9-5 -7 16 -15-2Z`,a.skin,LB.ink,1.2);P(c,`M${tx+15} ${ty+31} l7 5 -9 3`,null,cs,2)}
+if(body&&torn){L(c,[rx-hip*.45,ry-5,rx-hip*.5,ry+4],cs,1.4);L(c,[rx+hip*.2,ry-3,rx+hip*.28,ry+5],cs,1.4)}
 if(!only){
  if(f.headDetached&&body)LB.drawSever(c,tx,ty-21,14);
  if(f.upperDetached)LB.drawSever(c,rx,ry+2,hip);

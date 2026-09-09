@@ -86,3 +86,15 @@ test('Belt-free bodies and half-covered upper eyelids render across all variants
  for(let eye=0;eye<6;eye++)for(let state=0;state<6;state++){ec.save();ec.translate(110+eye*220,95+state*115);ec.scale(1.25,1.25);L.drawFace(ec,{...L.defaultAppearance(),head:(eye+state)%10,eyes:eye,hair:11,beard:0,details:5},states[state],1.8,1);ec.restore();L.text(ec,L.options.eyes[eye]+' / '+states[state],110+eye*220,151+state*115,12,L.ink,'Arial','center')}
  fs.writeFileSync(path.join(ROOT,'tests/half-eyelids-render.png'),eyes.toBuffer('image/png'));
 });
+
+test('Both grapple hands remain attached to the opponent shoulders',()=>{
+ const motions=['suplex','slam','javelin','carry','airplane','crowd'],samples=[.18,.32,.5,.7],results=[];
+ for(const motion of motions)for(const u of samples){const[p,e]=setup(240+motions.indexOf(motion));p.x=1148;e.x=1213;p.facing=1;e.facing=-1;p.state='grapple';p.action={kind:'grapple',time:u*1.45,duration:1.45,impact:1.45*.76,done:false,motion,grabbed:u>.16};L.Combat.grapple(p,e,p.action,u,0);const pose=L.Animation.pose(p,clock/1000),hands=[L.Animation.toWorld(p,pose,pose.frontHand),L.Animation.toWorld(p,pose,pose.rearHand)],shoulders=L.Animation.shoulders(e,clock/1000),roots=L.Animation.shoulders(p,clock/1000),d=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y),straight=d(hands[0],shoulders[0])+d(hands[1],shoulders[1]),crossed=d(hands[0],shoulders[1])+d(hands[1],shoulders[0]),error=Math.min(straight,crossed),reach=L.bodySpecs[p.appearance.body].arm*1.011*p.appearance.height,frontDistance=d(roots[1],hands[0]),rearDistance=d(roots[0],hands[1]);assert(error<.001,`${motion} shoulder grip drifted ${error}`);assert(frontDistance<=reach,`${motion} front arm stretched ${frontDistance} beyond ${reach} at ${u}`);assert(rearDistance<=reach,`${motion} rear arm stretched ${rearDistance} beyond ${reach} at ${u}`);results.push(error)}
+ return{motions:motions.length,samples:samples.length,maxError:Math.max(...results)};
+});
+
+test('Grapple and integrated shirt tears render through lift and carry',()=>{
+ const cv=createCanvas(1800,920),c=cv.getContext('2d');c.fillStyle='#e3d7b5';c.fillRect(0,0,1800,920);const samples=[.18,.32,.5,.7];
+ for(let col=0;col<4;col++)for(let row=0;row<2;row++){const[p,e]=setup(310+col+row*4);p.appearance.body=col*2+row;e.appearance.body=9-col*2-row;p.x=180+col*450;e.x=p.x+65;p.y=e.y=410+row*450;p.facing=1;e.facing=-1;p.hp=p.maxHp*(row?.18:.42);p.state='grapple';p.action={kind:'grapple',time:samples[col]*1.45,duration:1.45,impact:1.45*.76,done:false,motion:row?'suplex':'carry',grabbed:true};L.Combat.grapple(p,e,p.action,samples[col],0);L.Rig.draw(c,p,2);L.Rig.draw(c,e,2);L.text(c,Math.round(samples[col]*100)+'% / '+(row?'SUplex':'carry'),p.x+32,p.y+34,15,L.ink,'Arial','center')}
+ fs.writeFileSync(path.join(ROOT,'tests/grapple-shirt-render.png'),cv.toBuffer('image/png'));
+});

@@ -6,6 +6,10 @@ An original adult-cartoon automatic fighting survival game made with HTML, CSS, 
 
 Belts and buckles have been removed from every fighter and spectator. Upper eyelids now span the full eye and cover its upper half in every facial state.
 
+## Contact and clothing update
+
+Grapple hands now follow the opponent's animated shoulder joints during grabs, lifts and carries. Damage changes the shirt's actual hem silhouette into connected tears instead of painting a skin-colored patch over the fabric.
+
 ## Sneakers update
 
 Every fighter and spectator wears low-top sneakers. The creator offers eight sneaker designs; previously saved footwear selections automatically use these replacements.

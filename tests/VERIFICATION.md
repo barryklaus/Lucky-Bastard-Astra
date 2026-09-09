@@ -40,3 +40,9 @@ All eight footwear IDs now draw low-top sneakers, including previously saved sel
 ## Belt removal and upper-eyelid update
 
 All waistband, belt-line and buckle artwork has been removed from the shared rig, which covers fighters, spectators and detached upper bodies. A native Canvas sheet was inspected across all ten body types, ten tops and eight bottoms. Upper eyelids now overlay the complete upper half of both eyeballs from corner to corner. A second sheet covers all six eye types across neutral, focused, angry, scared, smug and hurt states. The full validation suite passes. Asset cache identifiers are now 1.0.8.
+
+## Grapple contact and integrated shirt damage update
+
+Both hands now lock to the opponent's animated shoulder joints throughout all six grapple motions: suplex, slam, javelin, carry, airplane spin and crowd throw. Automated checks sample four stages of every motion and report zero shoulder drift while keeping both arms within their real two-segment reach. Lift and carry placement follows the shoulder midpoint, which prevents stretched rubber arms and disconnected grips. A native Canvas contact sheet was inspected across grab, lift, carry and suplex stages.
+
+Damaged shirts now change the torso silhouette itself. At 50% and 76% damage, the shirt hem gains progressively deeper irregular tears with edge threads; the old skin-colored patch painted over the moving shirt has been removed. The complete validation suite passes. Asset cache identifiers are now 1.0.9.
