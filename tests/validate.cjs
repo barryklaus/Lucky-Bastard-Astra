@@ -50,6 +50,10 @@ test('Blood particles and ground splashes are bounded',()=>{L.Particles.items=[]
 
 test('Final blow begins with hit-stop before slow motion',()=>{const[p,e]=setup(102);e.hp=0;L.Combat.lethal(p,e,{rare:true,finisher:'head'});const part=L.Physics.parts[0],x=part.x,y=part.y;tick(4);assert.equal(part.x,x);assert.equal(part.y,y);tick(8);assert.notEqual(part.y,y);assert(L.game.finalHold.elapsed<4)});
 
+test('Final blows use ultra slow motion and still finish at four seconds',()=>{const[p,e]=setup(104);e.hp=0;L.Combat.lethal(p,e,{rare:true,finisher:'head'});const start=L.game.time,hold=L.game.finalHold;tick(30);assert(Math.abs(hold.elapsed-.5)<.0001);assert(L.game.time-start<.04,'Opening final blow advanced too quickly');tick(211);assert(!L.game.finalHold,'Final blow exceeded its four-second hold')});
+
+test('All three dodges trigger readable slow motion and camera focus',()=>{for(const kind of['headSway','bodySway','stepBack']){const[p,e]=setup(106);L.Combat.start(e,'punch',{lab:true,target:kind==='headSway'?'head':'body'});L.Combat.dodge(p,kind);tick(20);assert(L.game.dodgeSlow>0,kind+' slow motion ended too early');assert(p.action.time<.09,kind+' animation was not slowed');assert.equal(L.Camera.mode,'dodge focus');tick(50);assert.equal(L.game.dodgeSlow,0)}});
+
 test('Open hands and victory fingers point beyond the wrist, away from the elbow',()=>{
  for(const pose of ['victory','open','block','relaxed'])for(const direction of [-Math.PI/2,0,Math.PI/2,Math.PI]){
   const cv=createCanvas(160,160),c=cv.getContext('2d');c.translate(80,80);c.rotate(direction-Math.PI/2);L.drawHand(c,pose,'#d8956b');

@@ -55,6 +55,8 @@ Use **Pause** or **Escape** to pause combat. Sound, quality, and Reduced Gore ca
 
 Weapon balance is checked with a reproducible 1,000-fight harness. Reach-aware spacing and visible striking-section collision give armed fighters a measured advantage while preserving unarmed upsets. Full methodology and results are in `tests/BALANCE.md` and `tests/balance-results.json`.
 
+Final blows use a four-second ultra-slow cinematic curve with an opening freeze and deep impact slowdown. Head sway, body sway and step-back jump briefly slow the whole fight and tighten the camera around the miss.
+
 Math trivia now uses basic arithmetic, times tables, exact division, counting, money, doubles and halves. Advanced maths, number-base conversion, clock angles, powers and permutations have been removed. The deck also includes curated factual questions; choices are shuffled on presentation. There is no instant replay, remote telemetry, asset download, or network dependency. Scenery and audience projectiles cannot remove health.
 
 Artwork and characters are original to this project. The animated style uses hand-authored organic paths and reusable pose families, with appearance-dependent proportions and silhouettes.
