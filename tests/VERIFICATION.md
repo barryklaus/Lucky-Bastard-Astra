@@ -70,3 +70,7 @@ Clean exchanges now create a 300–480 ms mutual guard reset, with additional re
 ## Static cargo-patch removal
 
 The two cargo-pocket rectangles previously drawn in root space after each rotating leg have been removed. Cargo trousers retain their wider silhouette, limb-following cel shading, fold lines and sneaker layering without any free-floating overlay. A native Canvas sheet covers idle, walking, running, kicking, knockdown and get-up poses in both facing directions, and an automated source check prevents the detached pocket path from returning. Asset cache identifiers are now 1.0.15.
+
+## Static shirt-patch and airborne-state fix
+
+The detached pocket badges on the arena vest and bomber jacket have been removed. A native Canvas sheet covers both tops during walking, kicking and hit reactions in both facing directions. Grounded states now correct stored vertical displacement at 620 pixels per second after a grapple lift is interrupted, while active grapple, carry and throw states keep their authored height. Automated checks lift a fighter 150 pixels, interrupt the hold, and verify an exact return to the arena floor. The corrected primary and holdout balance sets record 62.5% and 63.1% armed wins, 84.9% and 80.9% tactical contact, and 12.2- and 12.3-second means. Asset cache identifiers are now 1.0.16.

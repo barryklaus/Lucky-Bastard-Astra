@@ -8,6 +8,9 @@
  LB.Combat.update=function(f,dt){
   const enemy=f.opponent;
   const late=LB.game.roundTime>45;
+  if(!['grappled','lifted','carried','thrown'].includes(f.state)&&f.y!==LB.FLOOR){
+   f.y=LB.clamp(f.y+dt*620,LB.FLOOR-180,LB.FLOOR);
+  }
   if((LB.game.exchangePauseUntil||0)>LB.game.time+2)LB.game.exchangePauseUntil=0;
   if(enemy&&!f.action&&resting(enemy.state)&&f.hp>0){
    f.stamina=Math.min(100,f.stamina+dt*22*(1+LB.abilityValue(f,'stamina')));

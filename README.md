@@ -8,7 +8,7 @@ Belts and buckles have been removed from every fighter and spectator. Upper eyel
 
 ## Contact and clothing update
 
-Grapple hands now follow the opponent's animated shoulder joints during grabs, lifts and carries. Damage changes the shirt's actual hem silhouette into connected tears instead of painting a skin-colored patch over the fabric.
+Grapple hands now follow the opponent's animated shoulder joints during grabs, lifts and carries. Damage changes the shirt's actual hem silhouette into connected tears instead of painting a skin-colored patch over the fabric. Detached vest and bomber pocket badges have been removed, leaving only clothing detail integrated into the moving torso.
 
 Cargo trousers no longer paint rectangular pocket patches at fixed hip coordinates. Their legs now use only artwork carried by the rotating thigh and lower-leg segments, preventing blocks from floating over moving knees.
 
@@ -26,7 +26,7 @@ Raised hands now point away from the elbow, with upward victory gestures. All fo
 
 ## Combat pace update
 
-Attacks and approach movement stay quick, while clean exchanges now end in a short mutual guard reset. Heavy actions recover more deliberately, ordinary strikes can cause knockdowns, and the standing fighter waits through the fall and get-up instead of attacking continuously. The cadence sample averages about 16.3 seconds to knockout. The four-second knockout cinematic and 15-second trivia timer retain their original timing.
+Attacks and approach movement stay quick, while clean exchanges now end in a short mutual guard reset. Heavy actions recover more deliberately, ordinary strikes can cause knockdowns, and the standing fighter waits through the fall and get-up instead of attacking continuously. Interrupted grapple lifts now settle fighters back onto the arena floor instead of leaving them airborne. The cadence sample averages about 12.1 seconds to knockout. The four-second knockout cinematic and 15-second trivia timer retain their original timing.
 
 ## Finishers
 

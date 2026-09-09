@@ -4,15 +4,15 @@ The test runs exactly 1,000 autonomous fights at 60 simulation steps per second.
 
 | Metric | Before | After |
 | --- | ---: | ---: |
-| Armed win rate | 24.4% | 60.3% |
-| Unarmed win rate | 75.6% | 39.7% |
-| Armed tactical contact rate | 56.5% | 46.6% |
-| Unarmed tactical contact rate | 73.3% | 49.2% |
-| Mean fight time | 15.0 s | 16.2 s |
-| Pole-family win rate | 9.0% | 47.3% |
+| Armed win rate | 24.4% | 62.5% |
+| Unarmed win rate | 75.6% | 37.5% |
+| Armed tactical contact rate | 56.5% | 84.9% |
+| Unarmed tactical contact rate | 73.3% | 82.6% |
+| Mean fight time | 15.0 s | 12.2 s |
+| Pole-family win rate | 9.0% | 50.3% |
 
 The original imbalance came from three mechanics working together: weapons used a fixed preferred range regardless of their reach, collision checked only the exact weapon tip, and armed attacks spent more time and stamina than their damage justified. Fighters also discarded weapons too often.
 
 The corrected game derives fighting distance from the fighter's arm and equipped weapon, checks contact along the outer striking section visible on screen, shortens weapon recovery, reduces weapon stamina cost, and makes voluntary throws less common. Weapon damage was then compressed to prevent the contact fix from making the armed side overwhelming.
 
-The cadence update adds mutual guard resets, deliberate defended attempts, and recurring knockdowns. Contact now means an attack that beats a block or dodge, so its gate is 42%. The accepted bands are 54–65% overall armed wins, 40–78% wins for every weapon family, at least 42% armed tactical contact, and under 18 seconds average fight time. The final seeded run passes all four gates. A second 1,000-fight holdout using untouched seeds also passes with 58.1% armed wins, 43.8% tactical contact, and a 16.7-second mean. Full per-family and per-weapon results are stored in `balance-results.json` and `balance-holdout-results.json`.
+The cadence update adds mutual guard resets, deliberate defended attempts, and recurring knockdowns. The accepted bands are 54–65% overall armed wins, 40–78% wins for every weapon family, at least 42% armed tactical contact, and under 18 seconds average fight time. Grounding interrupted grapple lifts removed attacks made from invalid heights. The final seeded run passes all four gates. A second 1,000-fight holdout using untouched seeds also passes with 63.1% armed wins, 80.9% tactical contact, and a 12.3-second mean. Full per-family and per-weapon results are stored in `balance-results.json` and `balance-holdout-results.json`.
